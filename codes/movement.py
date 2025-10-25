@@ -12,7 +12,7 @@ from mini.apis.base_api import MiniApiResultType
 MiniSdk.set_log_level(logging.INFO)
 MiniSdk.set_robot_type(MiniSdk.RobotType.EDU)
 
-SERIAL_SUFFIX = "00213"  # Adjust as needed
+SERIAL_SUFFIX = "00213"  # AlphaMini number
 SLEEP_DURATION = 6
 STEP_SIZE = 1
 
@@ -76,7 +76,7 @@ async def control_loop():
         else:
             print("Invalid input! Use W/A/S/D for movement, R to raise hands, or Q to quit.")
 
-# === Full Main Execution ===
+# === Main Code ===
 async def main():
     device = await get_device_by_name()
     if not device:
