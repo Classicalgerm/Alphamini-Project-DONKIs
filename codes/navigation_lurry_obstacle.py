@@ -1,10 +1,7 @@
 import asyncio
 import logging
 import sys
-
-#  THE CORRECT MODULE NAME IS 'api_sence' (Confirmed)
 from mini.apis.api_sence import GetInfraredDistance, GetInfraredDistanceResponse
-
 import mini.mini_sdk as MiniSdk
 from mini.dns.dns_browser import WiFiDevice
 from mini.apis.api_action import MoveRobot, MoveRobotDirection, MoveRobotResponse
@@ -19,17 +16,6 @@ STEP_SIZE = 1  # Default steps for forward movement
 BACKWARD_STEPS = 2  # Steps to move backward for avoidance
 SLEEP_DURATION = 2
 SAFE_DISTANCE_CM = 20
-
-
-# ---------------------
-
-# The sensor discovery logic is no longer dynamic since we confirmed the name.
-# We will use the direct imports and correct class names found by the previous run.
-# Assuming your previous run found the classes, we use the standard names now.
-
-# We must keep a simplified structure now that the error is resolved.
-# We trust that GetInfraredDistance and GetInfraredDistanceResponse are the correct class names.
-
 
 async def get_device_by_name():
     """Searches for the robot device by its serial suffix."""

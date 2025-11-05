@@ -1,7 +1,6 @@
 import asyncio
 import logging
 import sys
-
 import mini.mini_sdk as MiniSdk
 from mini.dns.dns_browser import WiFiDevice
 from mini.apis.api_action import MoveRobot, MoveRobotDirection, MoveRobotResponse
