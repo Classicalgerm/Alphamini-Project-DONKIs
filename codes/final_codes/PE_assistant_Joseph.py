@@ -167,7 +167,7 @@ async def main():
 
             # Step 2: Push-ups
             await tts_speak("Let's do 5 push-ups.")
-            await do_repetition("012", 5, "push-ups")
+            await do_repetition("012", 1, "push-ups")
 
             # Step 3: Squats
             await tts_speak("Let's do 2 squats.")

@@ -163,7 +163,7 @@ async def attendance_module(state: dict):
     """Run the attendance flow (takes photos and logs). User can say 'back' to return anytime."""
     await robot_speak("Attendance module activated. Say 'back' to return to main menu anytime.", state)
     # adjust number_of_students to your needs
-    number_of_students = 3
+    number_of_students = 1
     for sid in range(1, number_of_students + 1):
         # before taking next picture, confirm or allow exit
         await robot_speak(f"Ready to capture student {sid}.", state)
@@ -205,7 +205,7 @@ async def do_repetition(action_code: str, reps: int, instruction: str, state: di
 
 async def pe_warmup(state: dict):
     await robot_speak("Starting warmup. Say 'back' to return to main menu anytime.", state)
-    exercises = [("012", 5, "push-ups"), ("031", 2, "squats"),
+    exercises = [("012", 1, "push-ups"), ("031", 2, "squats"),
                  ("017", 1, "stretch your arms"), ("028", 2, "lunges")]
     for code, reps, desc in exercises:
         # check for immediate return before each exercise
@@ -412,7 +412,7 @@ async def assistant_main():
     try:
         while True:
             # main menu prompt (spoken once between commands)
-            await robot_speak("Awaiting command: attendance, warm up, quiz, translate, clock, or exit.", tts_state)
+            await robot_speak("Awaiting command: take attendance, warm up, quiz, translate, clock, or exit.", tts_state)
             cmd = await hybrid_listen()
             if not cmd:
                 continue
